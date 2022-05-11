@@ -1,4 +1,4 @@
-import R from "./ramda.js";
+import R from "./ramda.js"; /* for range function
 
 /**
  * This file is an adaption of the Computing 1 exam into Javascript.
