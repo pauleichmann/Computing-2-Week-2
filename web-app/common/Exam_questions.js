@@ -1,4 +1,4 @@
-import R from "./ramda.js"; /* for range function
+import R from "./ramda.js"; /* for range function */
 
 /**
  * This file is an adaption of the Computing 1 exam into Javascript.
@@ -26,7 +26,17 @@ const Exam_questions = {
  * @returns {string} The shortest word in the input array.
  * @example shortest_word(["hello", "cat", "ok", "12345"]) // "ok";
  */
-Exam_questions.q1.shortest_word = function (word_array) {
+Exam_questions.q1.shortest_word = function (word_array) { 
+    word_array = ["hello", "cat", "ok", "12345"];
+    let shortest_word = word_array[0];
+    let length = word_array[0].length;
+    word_array.forEach(myfunction(item));
+    function myfunction(item){
+        if (item.length < length) {
+            shortest_word = item;
+        }
+    }
+    return shortest_word;
 };
 
 /**
@@ -40,6 +50,22 @@ Exam_questions.q1.shortest_word = function (word_array) {
  * @example sum_of_numbers(["hello", "cat", 2, true, 17, undefined]) // 19;
  */
 Exam_questions.q2.sum_of_numbers = function (array_of_any_type) {
+    const array_of_any_type = ["hello", "cat", 2, true, 17, undefined]; 
+    const number_array = [];
+    array_of_any_type.forEach(myfunction(item));
+    function myfunction(item){
+        if (isNaN(item)){ 
+            return; 
+        }
+        else {
+            number_array.push(item);
+        }
+    }
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += number_array[i];
+    }
+    return sum;
 };
 
 /**
